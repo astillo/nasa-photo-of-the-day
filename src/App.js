@@ -33,7 +33,7 @@ function App() {
       <Author authContent={author} />
       <DateC dateCont={date} />
       <Image src={img} />
-      <Content Content={content} />
+      <div className="cont"><Content Content={content} /></div>
 
 
     </div>
