@@ -6,6 +6,15 @@ import Author from './components/author/author';
 import Content from './components/content/content';
 import DateC from './components/date/date';
 import Img from './components/img/img';
+import renderer from 'react-test-renderer';
+
+it('renders correctly', () => {
+  const tree = renderer
+    .create(<Content />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+})
+
 function App() {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
