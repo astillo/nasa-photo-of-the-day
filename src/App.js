@@ -5,7 +5,7 @@ import Title from './components/title/title';
 import Author from './components/author/author';
 import Content from './components/content/content';
 import DateC from './components/date/date';
-import Image from './components/img/img';
+import Img from './components/img/img';
 function App() {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -25,15 +25,15 @@ function App() {
     setDate(obj.data.date)
     setImg(obj.data.url)
     setContent(obj.data.explanation)
-
+    console.log(obj)
   }
   return (
     <div className="App">
-      <Title titleContent={title} />
+      {/* <Title titleContent={title} />
       <Author authContent={author} />
       <DateC dateCont={date} />
-      <Image src={img} />
-      <div className="cont"><Content Content={content} /></div>
+      <Img src={img} /> */}
+      <div className="cont"><Content Content={content} Title={title} Author={author} DateC={date} Img={img} /></div>
 
 
     </div>

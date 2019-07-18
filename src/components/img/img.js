@@ -1,9 +1,19 @@
 import React from 'react';
-const Image = (props) => {
+import { Image } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css'
+
+const Img = (props) => {
     const { src } = props;
     return (
-        <img src={src} />
+        <Image
+            rounded
+            src={src}
+            size='medium'
+
+
+        />
+        //<img src={src} />
     );
 };
 
-export default Image;
+export default Img;
